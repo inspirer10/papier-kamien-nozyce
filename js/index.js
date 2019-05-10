@@ -100,9 +100,9 @@
 		if (random == 1) {
 			return 'papier';
 		} else if (random == 2) {
-			return 'kamien';
+			return 'kamień';
 		} else if (random == 3) {
-			return 'nozyce';
+			return 'nożyce';
 		}
 	};
 
@@ -132,17 +132,17 @@
 		var roundResult = '';
 		var text = '';
 
-		if ((playerChoice == 'papier' && computerChoice == 'kamien') || (playerChoice == 'nozyce' && computerChoice == 'papier') ||
-			(playerChoice == 'kamien' && computerChoice == 'nozyce')) {
+		if ((playerChoice == 'papier' && computerChoice == 'kamień') || (playerChoice == 'nożyce' && computerChoice == 'papier') ||
+			(playerChoice == 'kamień' && computerChoice == 'nożyce')) {
 			roundResult = ' WYGRANA! ';
 			text = 'GRATULACJE ! ';
 			params.playerScore++;
 			params.currentRound++;
-		} else if ((playerChoice == 'papier' && computerChoice == 'nozyce') || (playerChoice == 'nozyce' && computerChoice == 'kamien') || (playerChoice == 'kamien' && computerChoice == 'papier')) {
+		} else if ((playerChoice == 'papier' && computerChoice == 'nożyce') || (playerChoice == 'nożyce' && computerChoice == 'kamień') || (playerChoice == 'kamień' && computerChoice == 'papier')) {
 			roundResult = ' PRZEGRANA ';
 			params.computerScore++;
 			params.currentRound++;
-		} else if ((playerChoice == 'papier' && computerChoice == 'papier') || (playerChoice == 'nozyce' && computerChoice == 'nozyce') || (playerChoice == 'kamien' && computerChoice == 'kamien')) {
+		} else if ((playerChoice == 'papier' && computerChoice == 'papier') || (playerChoice == 'nożyce' && computerChoice == 'nożyce') || (playerChoice == 'kamień' && computerChoice == 'kamień')) {
 			roundResult = 'REMIS ';
 			params.currentRound++;
 		}
