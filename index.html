@@ -1,44 +1,49 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="pl">
 
-<head>
-  <meta charset="UTF-8">
-  <title>PAPIER KAMIEŃ NOŻYCE</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8">
+    <title>My website title</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
 
-  
-</head>
-
-<body>
-
-  <div id="informations" class="boost">Kliknij przycisk i podaj liczbę rund !</div>
-<div>
-	<button id="rounds">New Game</button>
-</div>
-<p class="result">Wynik w formacie: GRACZ - KOMPUTER</p>
-<div id="result" class="score"></div>
-<p class="result">Dokonaj wyboru !</p>
-<div>
-	<button id="paper">Papier</button>
-</div>
-<div>
-	<button id="rock">Kamień</button>
-</div>
-<div>
-	<button id="scissors">Nożyce</button>
-</div>
-<div id="output" class="boost"></div>
-  
-  
-
-    <script  src="js/index.js"></script>
+  <body>
+    <div id="informations" class="boost">Kliknij przycisk i podaj liczbę rund !</div>
+    <div>
+      <button id="rounds">Nowa Gra!</button>
+    </div>
+    <p class="result">Wynik w formacie: GRACZ - KOMPUTER</p>
+    <div id="result" class="score"></div>
+    <p class="result">Dokonaj wyboru !</p>
+    <div>
+      <button id="papier" data-move="papier" class="player-move">Papier</button>
+    </div>
+    <div>
+      <button id="kamien" data-move="kamien" class="player-move">Kamień</button>
+    </div>
+    <div>
+      <button id="nozyce" data-move="nozyce" class="player-move">Nożyce</button>
+    </div>
+    <div id="output" class="boost"></div>
 
 
+    <!--  to co bedzie widoczne dopiero po końcu gry - modal z wynikiem -->
+    <div class="overlay" id="modal-overlay">
+      <div class="modal game-over" id="modal-one">
+        <a href="#" class="close">x</a>
+        <header>Wynik: </header>
+        <div class="content">
+          <p id="score">WYNIK !</p>
+        </div>
+        <table id="table">
+          <!-- TABELKA Z WYNIKIEM - W MODALU  -->
+        </table>
+      </div>
+    </div>
 
-
-</body>
+    <script src="js/index.js"></script>
+  </body>
 
 </html>

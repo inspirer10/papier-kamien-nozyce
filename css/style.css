@@ -1,49 +1,129 @@
 body {
-  padding: 20px;
-  text-align: center;
-  background: #fdffdb;
+	padding: 20px;
+	text-align: center;
+	background: #fdffdb;
 }
 
 button {
-  display: inline-block;
-  padding: 12px 50px;
-  max-width: 100%;
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  color: #fff;
-  background-color: #02ac46;
-  border: 2px solid #02ac46;
-  border-radius: 4px;
-  transition: color .4s, background-color .4s;
-  cursor: pointer;
-  outline: 0 !important;
-  text-decoration: none;
-  touch-action: manipulation;
-  user-select: none;
-}
-button:hover, button:active {
-  color: #02ac46;
-  background-color: #fff;
+	display: inline-block;
+	padding: 12px 50px;
+   	max-width: 100%;
+	margin: 20px 0;
+	font-size: 18px;
+   	font-weight: 600;
+	text-align: center;
+   	white-space: nowrap;
+   	vertical-align: middle;
+
+	color: #fff;
+   	background-color: #02ac46;
+	border: 2px solid #02ac46;
+   	border-radius: 4px;
+    
+	transition: color .4s, background-color .4s;
+
+   cursor: pointer;
+	outline: 0!important;
+	text-decoration: none;
+   	touch-action: manipulation;
+   	user-select: none;
+	
+	&:hover, &:active {
+		color: #02ac46;
+		background-color: #fff;
+	}
 }
 
-button {
-  margin: 20px 0;
-}
 
 .score {
-  font-size: 35px;
-  font-weight: bold;
-  color: limegreen;
+	font-size: 35px;
+	font-weight: bold;
+	color: limegreen;
 }
 
 .result {
-  font-size: 23px;
-  font-weight: bold;
+	font-size: 23px;
+	font-weight: bold;
 }
 
 .boost {
-  font-size: 19px;
+	font-size: 20px;
+}
+
+//  13.2 - modal
+.container {
+	max-width: 400px; 
+	margin: 0 auto;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	
+	&.show {
+		display: block;
+		height: 100vh;
+		overflow: auto;
+	}
+}
+
+.modal {
+	display: none;
+	background: #fff;
+	width: 700px;
+	font-size: 21px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0%);
+
+	&.show {
+		display: block;
+    	height: auto;
+    	margin-top: 10%;
+    	margin-bottom: 10%;
+	}
+	
+	.close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 5px;
+		color: #000;
+		text-decoration: none;
+	}
+	
+	header {
+		font-size: 20px;
+		line-height: 30px;
+		min-height: 30px;
+		font-weight: bold;
+		padding: 0 30px;
+	}
+
+	.content {
+		min-height: 30px;
+		padding: 5px 30px;
+	}
+}
+
+a {
+	color: red;
+	font-size: 30px;
+}
+
+//tabelka w modalu
+
+td {
+	border: 1px solid red;
+	padding: 5px;
+}
+
+.main {
+	color: blue;
+	font-size: 25px;
 }
