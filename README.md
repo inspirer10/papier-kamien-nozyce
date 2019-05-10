@@ -1,1 +1,1 @@
-# papier-kamien-nozyce  Link do strony: 
+# Link do strony:     https://inspirer10.github.io/papier-kamien-nozyce/
