@@ -1,4 +1,4 @@
-body { padding: 20px; text-align: center; background: #fdffdb; }
+body { padding: 20px; text-align: center; background: #fdffdb; font-family: 'Merriweather', serif; }
 
 button { display: inline-block; padding: 12px 50px; max-width: 100%; margin: 20px 0; font-size: 18px; font-weight: 600; text-align: center; white-space: nowrap; vertical-align: middle; color: #fff; background-color: #02ac46; border: 2px solid #02ac46; border-radius: 4px; transition: color .4s, background-color .4s; cursor: pointer; outline: 0 !important; text-decoration: none; -ms-touch-action: manipulation; touch-action: manipulation; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
@@ -18,7 +18,7 @@ button:hover, button:active { color: #02ac46; background-color: #fff; }
 
 .modal { display: none; background: #fff; width: 700px; font-size: 21px; position: absolute; left: 50%; transform: translate(-50%, 0%); }
 
-.modal.show { display: block; height: auto; margin-top: 10%; margin-bottom: 10%; }
+.modal.show { display: block; height: auto; margin-top: 5%; margin-bottom: 5%; }
 
 .modal .close { position: absolute; right: 0; top: 0; padding: 5px; color: #000; text-decoration: none; }
 

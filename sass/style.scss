@@ -2,6 +2,7 @@ body {
 	padding: 20px;
 	text-align: center;
 	background: #fdffdb;
+	font-family: 'Merriweather', serif;
 }
 
 button {
@@ -83,8 +84,8 @@ button {
 	&.show {
 		display: block;
     	height: auto;
-    	margin-top: 10%;
-    	margin-bottom: 10%;
+    	margin-top: 5%;
+    	margin-bottom: 5%;
 	}
 	
 	.close {
