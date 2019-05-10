@@ -171,7 +171,7 @@
 		if (params.playerScore == params.rounds) {
 			info('<strong>WYGRAŁEŚ</strong> GRĘ, <strong>GRATULACJE!</strong>');
 			params.block = true;
-			log('Gra skończona, <strong>kliknij</strong> Przycisk <strong>Nowa Gra !</strong> !');
+			log('Gra skończona, <strong>kliknij</strong> Przycisk <strong>Nowa Gra !</strong>');
 
 			for (var i = 0; i < params.progress.length; i++) {
 				boxes += `<tr>
@@ -188,7 +188,7 @@
 		} else if (params.computerScore == params.rounds) {
 			info('<strong>PRZEGRAŁEŚ</strong> GRĘ, POWODZENIA NASTĘPNYM RAZEM !');
 			params.block = true;
-			log('Gra skończona, <strong>kliknij</strong> Przycisk <strong>Nowa Gra !</strong> !');
+			log('Gra skończona, <strong>kliknij</strong> Przycisk <strong>Nowa Gra !</strong>');
 
 			for (var i = 0; i < params.progress.length; i++) {
 				boxes += `<tr>
