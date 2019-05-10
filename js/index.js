@@ -7,6 +7,7 @@
 	var round = document.getElementById('rounds');
 	var informations = document.getElementById('score');
 	var gameButtons = document.querySelectorAll('.player-move');
+	var gameInfo = document.querySelector('#gameInfo');
 
 
 	// obiekt
@@ -29,6 +30,10 @@
 
 	var info = function (text) {
 		informations.innerHTML = (text + '<br>');
+	};
+
+	var helpful = function (text) {
+		gameInfo.innerHTML = (text + '<br>');
 	};
 
 
@@ -93,7 +98,6 @@
 
 
 
-
 	// RUCH KOMPUTERA - LOSOWANIE
 	var computerMove = function () {
 		var random = (Math.floor(Math.random() * (3 - 1 + 1)) + 1);
@@ -112,9 +116,12 @@
 	round.addEventListener('click', function () {
 		params.rounds = parseFloat(window.prompt('Podaj ilość wygranych rund do których toczyć ma się gra !'));
 		if (isNaN(params.rounds)) {
-			info('Podano złą wartość! Wpisz liczbę!<br>');
+			helpful('Podano złą wartość! Wpisz liczbę!<br>');
+		} else if (params.rounds == 1) {
+			helpful('Gra będzie toczyć sie do ' + params.rounds + ' wygranej rundy !<br>');
+			params.block = false;
 		} else {
-			info('Gra będzie toczyć sie do ' + params.rounds + ' wygranych rund !<br>');
+			helpful('Gra będzie toczyć sie do ' + params.rounds + ' wygranych rund !<br>');
 			params.block = false;
 		};
 
@@ -149,10 +156,10 @@
 
 
 		var data = {
-			currentRound: params.currentRound, 			//numer akutalnej rundy
-			player: playerChoice, 							//ruch gracza
+			currentRound: params.currentRound, 					//numer akutalnej rundy
+			player: playerChoice, 								//ruch gracza
 			ai: computerChoice, 								//ruch komputer
-			roundResult: roundResult,	 					//wynik rundy (wygrana,remis,porażka)
+			roundResult: roundResult,	 						//wynik rundy (wygrana,remis,porażka)
 			gameResult: params.playerScore + ' - ' + params.computerScore	// wynik gry po rundzie (1-0 3-2)
 		};
 
@@ -171,7 +178,7 @@
 		if (params.playerScore == params.rounds) {
 			info('<strong>WYGRAŁEŚ</strong> GRĘ, <strong>GRATULACJE!</strong>');
 			params.block = true;
-			log('Gra skończona, <strong>kliknij</strong> Przycisk <strong>Nowa Gra !</strong>');
+			log('Gra skończona, <strong>kliknij</strong> Przycisk <strong>Nowa Gra !</strong> !');
 
 			for (var i = 0; i < params.progress.length; i++) {
 				boxes += `<tr>
@@ -188,7 +195,7 @@
 		} else if (params.computerScore == params.rounds) {
 			info('<strong>PRZEGRAŁEŚ</strong> GRĘ, POWODZENIA NASTĘPNYM RAZEM !');
 			params.block = true;
-			log('Gra skończona, <strong>kliknij</strong> Przycisk <strong>Nowa Gra !</strong>');
+			log('Gra skończona, <strong>kliknij</strong> Przycisk <strong>Nowa Gra !</strong> !');
 
 			for (var i = 0; i < params.progress.length; i++) {
 				boxes += `<tr>
