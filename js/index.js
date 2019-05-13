@@ -100,7 +100,7 @@
 
 	// RUCH KOMPUTERA - LOSOWANIE
 	var computerMove = function () {
-		var random = (Math.floor(Math.random() * (3 - 1 + 1)) + 1);
+		var random = (Math.floor(Math.random() * 3) + 1);
 		if (random == 1) {
 			return 'papier';
 		} else if (random == 2) {
@@ -172,7 +172,13 @@
 	};
 
 	var gameOver = function () {
-		var boxes = '';
+		var boxes = `<tr class="main">
+						<td>Numer rundy:</td> 
+						<td>Ruch gracza:</td> 
+						<td>Ruch komputera:</td> 
+						<td>Rezultat rundy:</td> 
+						<td>Wynik gry po tej rundzie:</td>
+					</tr>`;
 		var table = document.querySelector('#table');
 
 		if (params.playerScore == params.rounds) {
