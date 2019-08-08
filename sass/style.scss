@@ -1,44 +1,51 @@
 body {
-	padding: 20px;
+	padding: 30px;
+	margin: 0;
 	text-align: center;
-	background: #fdffdb;
+	background-color: rgba(0, 0, 0, 0.5);
+	font-family: 'Oswald', sans-serif;
+	color: white;
+	text-shadow: 2px 2px 2px #444;
 }
 
 button {
 	display: inline-block;
-   padding: 12px 50px;
-   max-width: 100%;
+	padding: 12px 60px;
+	max-width: 100%;
 	margin: 20px 0;
-	font-size: 18px;
-   font-weight: 600;
-   text-align: center;
-   white-space: nowrap;
-   vertical-align: middle;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
 
-	color: #fff;
-   background-color: #02ac46;
-	border: 2px solid #02ac46;
-   border-radius: 4px;
-    
-	transition: color .4s, background-color .4s;
-
-   cursor: pointer;
-	outline: 0!important;
+	cursor: pointer;
+	outline: 0 !important;
 	text-decoration: none;
-   touch-action: manipulation;
-   user-select: none;
-	
-	&:hover, &:active {
-		color: #02ac46;
-		background-color: #fff;
+	touch-action: manipulation;
+	user-select: none;
+
+	border: none;
+	border-radius: 4px;
+	transition: color .3s, background-color .3s;
+	text-decoration: none;
+	color: #ffeb01;
+	background: #293462;
+	box-shadow: 7px 7px 0 red;
+
+	&:hover,
+	&:active {
+		background: #216583;
+		color: red;
 	}
 }
 
 
 .score {
-	font-size: 35px;
+	font-size: 50px;
 	font-weight: bold;
-	color: limegreen;
+	color: #c10000;
+	padding-top: 20px;
 }
 
 .result {
@@ -46,13 +53,27 @@ button {
 	font-weight: bold;
 }
 
+.choice {
+	font-size: 23px;
+	font-weight: bold;
+	margin-top: 0;
+}
+
 .boost {
-	font-size: 20px;
+	font-size: 30px;
+	color: #c10000;
+	font-weight: bold;
+	padding-bottom: 25px;
+}
+
+.output {
+	font-size: 22px;
+	padding-top: 25px;
 }
 
 //  13.2 - modal
 .container {
-	max-width: 400px; 
+	max-width: 400px;
 	margin: 0 auto;
 }
 
@@ -64,7 +85,7 @@ button {
 	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, 0.7);
-	
+
 	&.show {
 		display: block;
 		height: 100vh;
@@ -75,19 +96,20 @@ button {
 .modal {
 	display: none;
 	background: #fff;
-	width: 700px;
 	font-size: 21px;
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, 0%);
+	color: black;
+	text-shadow: none;
 
 	&.show {
 		display: block;
-    	height: auto;
-    	margin-top: 5%;
-    	margin-bottom: 5%;
+		height: auto;
+		margin-top: 5%;
+		margin-bottom: 5%;
 	}
-	
+
 	.close {
 		position: absolute;
 		right: 0;
@@ -95,8 +117,15 @@ button {
 		padding: 5px;
 		color: #000;
 		text-decoration: none;
+		font-size: 35px;
+		padding-right: 15px;
+		padding-top: 0;
+
+		&:hover {
+			color: red;
+		}
 	}
-	
+
 	header {
 		font-size: 20px;
 		line-height: 30px;
@@ -116,8 +145,8 @@ a {
 	font-size: 30px;
 }
 
-//tabelka w modalu
 
+//tabelka w modalu
 td {
 	padding: 5px;
 	width: 20%;
@@ -126,8 +155,4 @@ td {
 .main {
 	color: blue;
 	font-size: 25px;
-}
-
-#table {
-	width: 700px;
 }

@@ -1,35 +1,156 @@
-body { padding: 20px; text-align: center; background: #fdffdb; }
+body {
+  padding: 30px;
+  margin: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  text-shadow: 2px 2px 2px #444;
+}
 
-button { display: inline-block; padding: 12px 50px; max-width: 100%; margin: 20px 0; font-size: 18px; font-weight: 600; text-align: center; white-space: nowrap; vertical-align: middle; color: #fff; background-color: #02ac46; border: 2px solid #02ac46; border-radius: 4px; transition: color .4s, background-color .4s; cursor: pointer; outline: 0 !important; text-decoration: none; -ms-touch-action: manipulation; touch-action: manipulation; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+button {
+  display: inline-block;
+  padding: 12px 60px;
+  max-width: 100%;
+  margin: 20px 0;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: 0 !important;
+  text-decoration: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: none;
+  border-radius: 4px;
+  transition: color .3s, background-color .3s;
+  text-decoration: none;
+  color: #ffeb01;
+  background: #293462;
+  box-shadow: 7px 7px 0 red;
+}
 
-button:hover, button:active { color: #02ac46; background-color: #fff; }
+button:hover, button:active {
+  background: #216583;
+  color: red;
+}
 
-.score { font-size: 35px; font-weight: bold; color: limegreen; }
+.score {
+  font-size: 50px;
+  font-weight: bold;
+  color: #c10000;
+  padding-top: 20px;
+}
 
-.result { font-size: 23px; font-weight: bold; }
+.result {
+  font-size: 23px;
+  font-weight: bold;
+}
 
-.boost { font-size: 20px; }
+.choice {
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 0;
+}
 
-.container { max-width: 400px; margin: 0 auto; }
+.boost {
+  font-size: 30px;
+  color: #c10000;
+  font-weight: bold;
+  padding-bottom: 25px;
+}
 
-.overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); }
+.output {
+  font-size: 22px;
+  padding-top: 25px;
+}
 
-.overlay.show { display: block; height: 100vh; overflow: auto; }
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
 
-.modal { display: none; background: #fff; width: 700px; font-size: 21px; position: absolute; left: 50%; transform: translate(-50%, 0%); }
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
 
-.modal.show { display: block; height: auto; margin-top: 5%; margin-bottom: 5%; }
+.overlay.show {
+  display: block;
+  height: 100vh;
+  overflow: auto;
+}
 
-.modal .close { position: absolute; right: 0; top: 0; padding: 5px; color: #000; text-decoration: none; }
+.modal {
+  display: none;
+  background: #fff;
+  font-size: 21px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  color: black;
+  text-shadow: none;
+}
 
-.modal header { font-size: 20px; line-height: 30px; min-height: 30px; font-weight: bold; padding: 0 30px; }
+.modal.show {
+  display: block;
+  height: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 
-.modal .content { min-height: 30px; padding: 5px 30px; }
+.modal .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  color: #000;
+  text-decoration: none;
+  font-size: 35px;
+  padding-right: 15px;
+  padding-top: 0;
+}
 
-a { color: red; font-size: 30px; }
+.modal .close:hover {
+  color: red;
+}
 
-td { padding: 5px; width: 20%; }
+.modal header {
+  font-size: 20px;
+  line-height: 30px;
+  min-height: 30px;
+  font-weight: bold;
+  padding: 0 30px;
+}
 
-.main { color: blue; font-size: 25px; }
+.modal .content {
+  min-height: 30px;
+  padding: 5px 30px;
+}
 
-#table { width: 700px; }
+a {
+  color: red;
+  font-size: 30px;
+}
+
+td {
+  padding: 5px;
+  width: 20%;
+}
+
+.main {
+  color: blue;
+  font-size: 25px;
+}
+/*# sourceMappingURL=style.css.map */

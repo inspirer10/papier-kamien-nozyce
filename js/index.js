@@ -16,7 +16,7 @@
 		playerScore: 0,
 		computerScore: 0,
 		block: true,
-		progress: []  // tablica
+		progress: [] // tablica
 	};
 
 
@@ -47,9 +47,9 @@
 			modals[i].classList.remove('show');
 		};
 
-		var targetElement = document.querySelector(modalToShow); 		//modalHref   				to potem znika(?)
+		var targetElement = document.querySelector(modalToShow); //modalHref   				to potem znika(?)
 		document.querySelector('#modal-overlay').classList.add('show');
-		targetElement.classList.add('show');							//modalHref						to potem znika(?)
+		targetElement.classList.add('show'); //modalHref						to potem znika(?)
 
 	};
 
@@ -66,7 +66,7 @@
 
 
 
-	// Dodajemy  funkcję zamykającą modal, oraz przywiązujemy ją do kliknięć na elemencie z klasą "close". 
+	// Dodajemy  funkcję zamykającą modal, oraz przywiązujemy ją do kliknięć na elemencie z klasą "close".
 
 	var hideModal = function (event) {
 		event.preventDefault();
@@ -80,21 +80,20 @@
 	}
 
 
-	//  zamykanie modala poprzez kliknięcie w overlay. 
+	//  zamykanie modala poprzez kliknięcie w overlay.
 
 	document.querySelector('#modal-overlay').addEventListener('click', hideModal);
 
 
 
-	// Musimy zablokować propagację kliknięć z samego modala - inaczej każde kliknięcie wewnątrz modala również zamykałoby go. 
+	// Musimy zablokować propagację kliknięć z samego modala - inaczej każde kliknięcie wewnątrz modala również zamykałoby go.
 
 	for (var i = 0; i < modals.length; i++) {
 		modals[i].addEventListener('click', function (event) {
 			event.stopPropagation();
 		});
 	}
-	//   działający modal! 
-
+	//   działający modal
 
 
 
@@ -156,11 +155,11 @@
 
 
 		var data = {
-			currentRound: params.currentRound, 					//numer akutalnej rundy
-			player: playerChoice, 								//ruch gracza
-			ai: computerChoice, 								//ruch komputer
-			roundResult: roundResult,	 						//wynik rundy (wygrana,remis,porażka)
-			gameResult: params.playerScore + ' - ' + params.computerScore	// wynik gry po rundzie (1-0 3-2)
+			currentRound: params.currentRound, //numer akutalnej rundy
+			player: playerChoice, //ruch gracza
+			ai: computerChoice, //ruch komputer
+			roundResult: roundResult, //wynik rundy (wygrana,remis,porażka)
+			gameResult: params.playerScore + ' - ' + params.computerScore // wynik gry po rundzie (1-0 3-2)
 		};
 
 		params.progress.push(data);
@@ -173,10 +172,10 @@
 
 	var gameOver = function () {
 		var boxes = `<tr class="main">
-						<td>Numer rundy:</td> 
-						<td>Ruch gracza:</td> 
-						<td>Ruch komputera:</td> 
-						<td>Rezultat rundy:</td> 
+						<td>Numer rundy:</td>
+						<td>Ruch gracza:</td>
+						<td>Ruch komputera:</td>
+						<td>Rezultat rundy:</td>
 						<td>Wynik gry po tej rundzie:</td>
 					</tr>`;
 		var table = document.querySelector('#table');
@@ -184,37 +183,37 @@
 		if (params.playerScore == params.rounds) {
 			info('<strong>WYGRAŁEŚ</strong> GRĘ, <strong>GRATULACJE!</strong>');
 			params.block = true;
-			log('Gra skończona, <strong>kliknij</strong> Przycisk <strong>Nowa Gra !</strong> !');
+			log('Gra skończona, <strong>kliknij</strong> Przycisk <strong>Nowa Gra</strong> !');
 
 			for (var i = 0; i < params.progress.length; i++) {
-				boxes += `<tr>
-								<td>${params.progress[i].currentRound}.</td>	
-								<td>${params.progress[i].player}</td> 
-								<td>${params.progress[i].ai}</td> 
-								<td>${params.progress[i].roundResult}</td> 
+				boxes += `<tr></tr>
+								<td>${params.progress[i].currentRound}.</td>
+								<td>${params.progress[i].player}</td>
+								<td>${params.progress[i].ai}</td>
+								<td>${params.progress[i].roundResult}</td>
 								<td>${params.progress[i].gameResult}</td>
 							</tr>`
 			}
 
 			table.innerHTML = boxes;
-			showModal('.game-over');	// iDentyfikator MODALA który ma być otwarty 
+			showModal('.game-over'); // iDentyfikator MODALA który ma być otwarty
 		} else if (params.computerScore == params.rounds) {
 			info('<strong>PRZEGRAŁEŚ</strong> GRĘ, POWODZENIA NASTĘPNYM RAZEM !');
 			params.block = true;
-			log('Gra skończona, <strong>kliknij</strong> Przycisk <strong>Nowa Gra !</strong> !');
+			log('Gra skończona, <strong>kliknij</strong> Przycisk <strong>Nowa Gra</strong> !');
 
 			for (var i = 0; i < params.progress.length; i++) {
 				boxes += `<tr>
-								<td>${params.progress[i].currentRound}.</td>	
-								<td>${params.progress[i].player}</td> 
-								<td>${params.progress[i].ai}</td> 
-								<td>${params.progress[i].roundResult}</td> 
+								<td>${params.progress[i].currentRound}.</td>
+								<td>${params.progress[i].player}</td>
+								<td>${params.progress[i].ai}</td>
+								<td>${params.progress[i].roundResult}</td>
 								<td>${params.progress[i].gameResult}</td>
 							</tr>`
 			}
 
 			table.innerHTML = boxes;
-			showModal('.game-over');	// iDentyfikator MODALA który ma być otwarty 
+			showModal('.game-over'); // iDentyfikator MODALA który ma być otwarty
 
 		};
 	};
@@ -230,4 +229,4 @@
 	};
 
 
-})(); 
+})();
